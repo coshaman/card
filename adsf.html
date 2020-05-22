@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>document.getElementById를 이용해서 span 값변경하기</title>
+<script language="javascript">
+  function spanchange() {
+    document.getElementById("test").innerHTML = "변경된 span값";
+  }
+</script>
+</head>
+<body>
+   <span id="test">현재값</span>
+   <input type="button" value="변경" onclick="spanchange();">
+</body>
+</html>

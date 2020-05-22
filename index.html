@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylepast.css">
+    <link rel="stylesheet" href="animate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dokdo&family=Gugi&family=Nanum+Myeongjo:wght@800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/wow.min.js"></script>
+    <!--<script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>-->
+    <script>
+        new WOW().init();
+    </script>
+    <script language="javascript">
+	</script>
+    <style type="text/css">
+    </style>
+    <style>
+	header {
+	     z-index: 500;
+	      position: fixed;
+	      top: 0;
+	      left: 0;
+	      right: 0;
+	      font-size: 16px;
+	      height: 50px;
+	      padding: 1rem;
+	      color: white;
+	      background: black;
+	      display: flex;
+	      align-items: center;
+	      letter-spacing: 5px;
+	      opacity: 0.8;
+	}
+	.active {
+    		background-color: #4CAF50;
+	}
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <!--<header style="text-align: left;">
+      <nav>
+        <span class="active" style="color: white; font-size: 25px"><a href="#" style="color: white; text-decoration: none;">Main</a></span>
+        <span><a href="#wrap3" style="color: white; text-decoration: none;">소개/수상</a></span>
+        <span><a href="#project" style="color: white; text-decoration: none;">프로젝트</a></span>
+        <span><a href="#comments" style="color: white; text-decoration: none;">방명록</a></span>
+      </nav>
+    </header>
+    <div style="position: fixed; bottom: 2px; right: 10px">
+        <a href="#"><i class="fas fa-sort-up fa-5x"></i></a>
+    </div>-->
+    
+    <div id="wrapper">
+		<h1>간단 카드 생성기</h1>
+				<form name="testForm">
+					<textarea name="info" rows=1 cols=10 class="feedback-input" id="name"></textarea></form>
+					<input type="button" onclick="spanchange()" value="확인" class="btn btn-primary">
+				<!--<textarea id="output" readonly="readonly"></textarea>-->
+				
+
+	</div>
+	<div style="height: 10px;"></div>
+	<div style="height: 300px;">
+		<div id="result" class="result" style="text-align: center; margin: auto; width: 80%; height: 100%; border-radius: 15px;">
+			<div style="height: 45%;"></div>
+			<p><span id="output">위에서 글을 입력한 뒤 확인 버튼을 눌러주세요</span></p>
+			<div style="height: 50%;"></div>
+		</div>
+	</div>
+	<div style="height: 10px;"></div>
+	<div style="margin: 0 auto; text-align: center;">
+	<div style="margin: auto; center;">
+		배경 색상 : 
+		<button type="button" style="border-radius: 100px; background-color: aqua; height: 20px; width: 20px;" onclick="aqua()"></button>
+		<button type="button" style="border-radius: 100px; background-color: orange; height: 20px; width: 20px; " onclick="orange()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #00FF00; height: 20px; width: 20px; " onclick="green()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #AEB404; height: 20px; width: 20px; " onclick="gold()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #8258FA; height: 20px; width: 20px; " onclick="pur()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #F5A9BC; height: 20px; width: 20px; " onclick="pink()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #CEF6F5; height: 20px; width: 20px; " onclick="sky()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #DF0101; height: 20px; width: 20px; " onclick="red()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #1C1C1C; height: 20px; width: 20px; " onclick="black()"></button>
+		<button type="button" style="border-radius: 100px; background-color: #FFFFFF; height: 20px; width: 20px; " onclick="white()"></button>
+		<button type="button" style="border-radius: 100px; background-color: url(sky-5114501_1280.jpg); height: 20px; width: 20px; " onclick="gra2()"></button>
+		<!--<button type="button" style="border-radius: 100px; background-color: linear-gradient(-135deg, #81F7F3, #A9F5A9, #F5D0A9) fixed; height: 20px; width: 20px; " onclick=""></button>-->
+		<button type="button" style="border-radius: 100px; background-image: url(dot.jpg); height: 20px; width: 20px; " onclick="gra1()"></button>
+		</div></div>
+	<div style="height: 10px;"></div>
+	<div style="margin: 0 auto; text-align: center;">
+	<div style="margin: auto; center;">
+		글꼴 :
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="g()">기본 글꼴</button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="gnanum()"><span style="font-family: Nanum Myeongjo;">나눔 명조</span></button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="gnanumpen()"><span style="font-family: Nanum Pen Script;">나눔 펜</span></button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="ghan()"><span style="font-family: Black Han Sans;">한 산즈</span></button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="gugi()"><span style="font-family: Gugi;">구기</span></button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="gdo()"><span style="font-family: Dokdo;">독도</span></button>
+		<!--<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="g()"><span style="font-family: ;"></span></button>
+		<button type="button" class="btn btn-outline-primary" style="border-radius: 100px;" onclick="g()"><span style="font-family: ;"></span></button>-->
+		</div></div>
+	<div style="height: 10px;"></div>
+	<div style="margin: 0 auto; text-align: center;">
+		<div style="margin: auto; center;">
+
+			<INPUT type="button" class="btn btn-outline-primary" value="글자 확대" onClick="ts( `result`, 1 )"></INPUT>
+			<INPUT type="button" class="btn btn-outline-primary" value="글자 축소" onClick="ts( `result`, -1 )"><BR/></INPUT>
+		</div>
+	</div>
+	
+	
+	<div style="height: 10px;"></div>
+	<div style="margin: 0 auto; text-align: center;">
+	<div style="margin: auto; center;">
+		글자 색상 : 
+		<button type="button" style="border-radius: 100px; background-color: black; height: 20px; width: 20px;" onclick="black1()"></button>
+		<button type="button" style="border-radius: 100px; background-color: aliceblue; height: 20px; width: 20px; " onclick="white1()"></button>
+		<button type="button" style="border-radius: 100px; background-color: blue; height: 20px; width: 20px; " onclick="blue1()"></button>
+		<button type="button" style="border-radius: 100px; background-color: red; height: 20px; width: 20px; " onclick="red1()"></button>
+		</div></div>
+	<script>
+		function spanchange() {
+			var cnt=document.testForm.info.value;
+			var master = String(cnt);
+			document.getElementById("output").innerHTML = master;
+	  	}
+		function aqua() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "aqua";
+		}
+		function orange() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "orange";
+			
+		}
+		function green() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#00FF00";
+		}
+		function gold() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#AEB404";
+		}
+		function pur() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#8258FA";
+		}
+		function pink() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#F5A9BC";
+		}
+		function sky() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#CEF6F5";
+		}
+		function red() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#DF0101";
+		}
+		function black() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#1C1C1C";
+		}
+		function white() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundColor = "#FFFFFF";
+		}
+		function gra1() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundRepeat = "no-repeat";
+			document.getElementById("result").style.backgroundImage= "url(dot.jpg)";
+		}
+		function gra2() {
+			document.getElementById("result").style.backgroundImage= "url()";
+			document.getElementById("result").style.backgroundRepeat = "no-repeat";
+			document.getElementById("result").style.backgroundImage= "url(sky-5114501_1280.jpg)";
+		}
+		function g() {
+			document.getElementById("result").style.fontFamily = "sans-serif";
+		}
+		function gnanum() {
+			document.getElementById("result").style.fontFamily = "Nanum Myeongjo";
+		}
+		function gnanumpen() {
+			document.getElementById("result").style.fontFamily = "Nanum Pen Script";
+		}
+		function ghan() {
+			document.getElementById("result").style.fontFamily = "Black Han Sans";
+		}
+		function gugi() {
+			document.getElementById("result").style.fontFamily = "Gugi";
+		}
+		function gdo() {
+			document.getElementById("result").style.fontFamily = "Dokdo";
+		}
+		function black1() {
+			document.getElementById("result").style.color = "black";
+		}
+		function white1() {
+			document.getElementById("result").style.color = "white";
+		}
+		function blue1() {
+			document.getElementById("result").style.color = "blue";
+		}
+		function red1() {
+			document.getElementById("result").style.color = "red";
+		}
+		//Specify affected tags. Add or remove from list:
+		var targets = new Array( `div`,`td`,`tr`,`li`,`ul`,`h1`,`h2`,`h3`,`h4`,`h5`,`h6`,`span`, `input`);
+		//Specify spectrum of different font sizes:
+		var sizes = new Array( `9`,`12`,`14`,`16`,`18`,`20`,`22`,`24`,`26` );
+		var startSize = 1;
+		function ts( target, inc ) {
+			if (!document.getElementById) return;
+			var d = document, cEl = null, size = startSize, i, j, cTags;
+			size += inc;
+			if ( size < 0 ){ //폰트 크기를 0 이하로 내릴 수 없게 설정
+				size = 0;
+			}
+			if ( size > 9 ){ //폰트 크기를 9 이상으로 올릴 수 없게 설정
+				size = 9;
+			}
+			startSize = size; 
+			if ( !( cEl = d.getElementById( target ) ) ){
+				cEl = d.getElementsByTagName( target )[ 0 ];
+			}
+			cEl.style.fontSize = sizes[ size ];
+			for ( i = 0 ; i < targets.length ; i++ ) {
+				cTags = cEl.getElementsByTagName( targets[ i ] ); //getElementsByTagName을 사용하면 배열로 받아짐
+				for ( j = 0 ; j < cTags.length ; j++ ){
+					//alert(cTags[ j ].style.fontSize);
+					cTags[ j ].style.fontSize = sizes[ size ] + "pt";
+		   cTags[ j ].style.lineHeight = sizes[ size ] * 1.5 + "pt";
+				}
+			}
+		}
+		//-->
+		
+		
+		function changesize(flag) {
+			obj = document.all.ct.style.fontSize;
+			num = eval(obj.substring(0,obj.length-2)*1);
+			if(!isNaN(num)) { 
+				if(flag==`+`) { 
+					document.all.ct.style.fontSize = eval(num + 1);
+				} else { 
+					if(num > 1) 
+						document.all.ct.style.fontSize = eval(num - 1);
+					else
+						alert(`최소사이즈 입니다.`);
+				} 
+			}
+		}
+		</script>
+		
+</body>
+</html>
